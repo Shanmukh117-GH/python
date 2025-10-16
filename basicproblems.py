@@ -44,5 +44,27 @@ print(f"The largest number in the list is: {largest_number}")
   name = "shanmukh"
 age = 20
 height = 5.4
-print(f"My name is {name}, I am {age} years old, My heigt is {height} meters")
+print(f"My name is {name}, I am {age} years old, My height is {height} meters")
 print(f"shanmukh's father age is {age+25} year old.")
+--------------------------------------------
+# Take input of heights separated by spaces
+heights_input = input("Enter all heights separated by a space: ")
+
+# Convert input into a list of integers
+heights = list(map(int, heights_input.split()))
+
+# Count number of people
+count = len(heights)
+print("Number of people:", count)
+
+# Calculate total height
+total = sum(heights)
+
+# Calculate average
+avg = total / count
+print("Average height:", avg)
+
+# Find heights below average
+below_avg = [h for h in heights if h < avg]
+print("Heights below average:", below_avg)
+
